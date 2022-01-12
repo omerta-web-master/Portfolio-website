@@ -1,0 +1,105 @@
+// Auto text writer
+(function autoTextWriter() {
+	const text = `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+  Consequatur quasi a aliquam et dolores facere incidunt voluptatem
+  veritatis distinctio earum?`;
+	const textContainer = document.querySelector("[data-auto-text]");
+	for (let i = 0; i < text.length; i++) {
+		setTimeout(() => {
+			textContainer.textContent += text[i];
+		}, 50 * i);
+	}
+})();
+
+// Animation on scroll
+(function animateOnScroll() {
+	const elements = document.querySelectorAll("[data-anim]");
+	const triggerPoint = window.innerHeight - 80;
+	window.addEventListener("scroll", animate);
+	window.addEventListener("load", animate);
+
+	elements.forEach(element => {
+		element.style.opacity = "0";
+	});
+
+	function animate() {
+		elements.forEach(element => {
+			if (element.getBoundingClientRect().top > triggerPoint) {
+				return;
+			}
+
+			const animateDirection = element.getAttribute("data-anim");
+
+			if (animateDirection === "left") {
+				element.classList.add("animate_left");
+				return;
+			}
+			if (animateDirection === "right") {
+				element.classList.add("animate_right");
+				return;
+			}
+			if (animateDirection === "bottom") {
+				element.classList.add("animate_bottom");
+				return;
+			}
+			if (animateDirection === "top") {
+				element.classList.add("animate_top");
+				return;
+			}
+		});
+	}
+})();
+
+(function projectImagesSlider() {
+	const controllers = document.querySelectorAll(
+		"[data-project__images-controller]"
+	);
+
+	controllers.forEach(controller => {
+		const sliderName = controller.getAttribute(
+			"data-project__images-controller"
+		);
+		const slider = document.querySelector(
+			`[data-project__images-slider=${sliderName}]`
+		);
+		const imageNumber = +controller.getAttribute("data-image-number");
+
+		controller.addEventListener("click", () => {
+			activateController(controller, sliderName);
+			slider.style.transform = `translate(-${(imageNumber - 1) * 100}%,0px)`;
+		});
+	});
+
+	function activateController(controller, sliderName) {
+		const controllers = document.querySelectorAll(
+			`[data-project__images-controller=${sliderName}]`
+		);
+		controllers.forEach(controller => {
+			controller.classList.remove("active");
+		});
+		controller.classList.add("active");
+	}
+})();
+
+// Projects dropdown
+(function projectsDropdown() {
+	const toggler = document.querySelector("[data-projects-dropdown-toggler]");
+	const dropdown = document.getElementById("projects_dropdown");
+	const dropdownContainer = document.querySelector(".dropdown");
+	toggler.addEventListener("click", () => {
+		dropdown.classList.toggle("show");
+	});
+
+	document.body.addEventListener("click", e => {
+		if (!dropdownContainer.contains(e.target)) {
+			dropdown.classList.remove("show");
+		}
+	});
+
+	const dropdownLinks = dropdown.querySelectorAll("a");
+	dropdownLinks.forEach(link => {
+		link.addEventListener("click", () => {
+			dropdown.classList.remove("show");
+		});
+	});
+})();

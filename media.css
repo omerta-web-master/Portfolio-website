@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+	/* SHOWCASE */
+	.showcase {
+		flex-direction: column;
+	}
+
+	.showcase__canvas-container {
+		display: none;
+	}
+
+	/* PROJECTS */
+	.project {
+		flex-direction: column;
+	}
+}

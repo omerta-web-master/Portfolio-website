@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap");
+
+/* BASE */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1300px;
+	margin: auto;
+	padding: 0px 1rem;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.main {
+	overflow-x: hidden;
+}
+
+/* ------------------------------------------ */
+/* HEADER */
+.main__header {
+	width: 100%;
+	background-color: white;
+	height: 60px;
+	position: relative;
+	z-index: 10;
+	position: sticky;
+	top: 0;
+}
+
+.main__nav {
+}
+
+.main__nav > ul {
+	display: flex;
+	justify-content: center;
+}
+
+.main__nav-link {
+	display: block;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	font-size: 1.6rem;
+	padding: 0.5rem 1rem;
+	color: black;
+	font-weight: 300;
+	font-family: "Oswald", sans-serif;
+	margin: 0;
+	cursor: pointer;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown_menu {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	min-width: 290px;
+	background-color: white;
+	box-shadow: 1px 1px 3px rgba(43, 54, 58, 0.432);
+	border-radius: 3px;
+}
+
+.dropdown_menu.show {
+	display: flex;
+}
+
+.dropdown_menu a {
+	text-decoration: none;
+	color: black;
+	font-size: 1.3rem;
+	display: block;
+	padding: 0.4rem 1.2rem;
+	transition: all 0.3s ease;
+}
+
+.dropdown_menu a:hover {
+	background-color: rgb(172, 201, 206);
+}
+
+/* SHOwCASE */
+.showcase__container {
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	background: url("./project-images/bg1.jpg") no-repeat center center/cover;
+	color: white;
+}
+
+.showcase__container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(137, 231, 243, 0.6);
+	z-index: 0;
+}
+
+.showcase {
+	position: relative;
+	display: flex;
+	z-index: 1;
+}
+
+.showcase__content {
+	flex: 1;
+}
+
+.showcase__canvas-container {
+	flex: 1;
+	min-height: 600px;
+	max-height: 600px;
+}
+
+#showcase__canvas {
+	width: 100%;
+	height: 100%;
+	transition: all;
+	animation: animateCanvas 2s ease;
+	position: relative;
+}
+
+.showcase__name {
+	color: black;
+	z-index: 1;
+	font-size: 2rem;
+	font-weight: 300;
+	margin-top: 7rem;
+	font-style: italic;
+	opacity: 0;
+	animation: animateShowcaseContent 2s ease calc(var(--animation-delay) * 4)
+		forwards;
+	position: relative;
+}
+
+.showcase__title {
+	font-weight: bold;
+	font-size: 5rem;
+	text-align: center;
+	color: rgba(67, 89, 104, 0.432);
+	text-shadow: 3px 3px 0px rgb(0, 0, 0);
+	margin-bottom: 1rem;
+	opacity: 0;
+	animation: animateShowcaseContent 2s ease calc(var(--animation-delay) * 2)
+		forwards;
+	position: relative;
+}
+
+#showcase__super {
+	font-size: 1.5rem;
+	font-weight: 300;
+	letter-spacing: -0.1rem;
+	color: rgb(17, 7, 73);
+	text-shadow: none;
+}
+
+.showcase__subtitle {
+	font-weight: 300;
+	color: rgb(31, 27, 27);
+	font-size: 1.6rem;
+	opacity: 0;
+	animation: animateShowcaseContent 2s ease var(--animation-delay) forwards;
+	position: relative;
+}
+
+.showcase__link {
+	text-decoration: none;
+	padding: 0.5rem 2rem;
+	color: white;
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	margin-top: 2rem;
+	background-color: rgba(43, 54, 58, 0.432);
+	transition: transform 1s ease, opacity 1s ease;
+	animation: animateShowcaseContent 2s ease;
+	position: relative;
+}
+
+.showcase__link:hover {
+	transform: scale(1.05);
+	opacity: 0.7;
+}
+
+@keyframes animateCanvas {
+	from {
+		opacity: 0;
+		top: -100px;
+		right: -100px;
+	}
+
+	to {
+		opacity: 1;
+		top: 0;
+		right: 0;
+	}
+}
+
+@keyframes animateShowcaseContent {
+	from {
+		opacity: 0;
+		top: -100px;
+		left: -100px;
+	}
+
+	to {
+		opacity: 1;
+		top: 0;
+		left: 0;
+	}
+}
+/* --------------------------------------------- */
+/* PROJECTS */
+.projects__section > article:nth-child(2n) {
+	background-color: rgb(0, 0, 0);
+	color: white;
+}
+.projects__section > article:nth-child(2n + 1) {
+	background-color: rgb(255, 255, 255);
+}
+.project__container {
+	width: 100%;
+	min-height: 400px;
+}
+
+.project {
+	display: flex;
+	gap: 3rem;
+	padding: 4rem 0px;
+}
+
+.project > div {
+	flex: 1;
+}
+
+.project__info > p {
+	font-size: 1.4rem;
+	font-weight: 300;
+	text-indent: 2rem;
+	margin-bottom: 0.7rem;
+}
+
+.project__title {
+	font-size: 2.5rem;
+	font-family: "Oswald", sans-serif;
+	letter-spacing: 0.1rem;
+	margin-bottom: 1rem;
+}
+
+.project__feature-list {
+	margin-bottom: 1rem;
+}
+
+.project__feature-item {
+	font-weight: 300;
+	font-size: 1.3rem;
+}
+
+.project__actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.project__btn {
+	flex: 1;
+	border: none;
+	outline: none;
+	padding: 0.5rem;
+	font-size: 1.4rem;
+	font-family: "Oswald", sans-serif;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	text-align: center;
+}
+
+.project__btn-primary {
+	background-color: rgb(34, 35, 36);
+	color: white;
+}
+
+.project__btn-primary:hover {
+	color: black;
+	background-color: rgb(216, 234, 235);
+}
+.project__btn-secondary {
+	background-color: rgb(216, 234, 235);
+	color: black;
+}
+.project__btn-secondary:hover {
+	color: white;
+	background-color: rgb(34, 35, 36);
+}
+
+/* PROJECT IMAGES SLIDER */
+.project__images {
+}
+
+.project__images-slider-container {
+	overflow-x: hidden;
+}
+
+.project__images-slider {
+	display: flex;
+	transition: all 0.2s ease;
+}
+
+.project__images-slide {
+	flex-shrink: 0;
+	width: 100%;
+}
+
+.project__images-controllers {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	margin-top: 0.5rem;
+}
+
+.project__images-controller {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	background-color: white;
+	border: 1px solid black;
+	transition: all 0.3s linear;
+}
+.project__images-controller.active {
+	transform: scale(1.4);
+	background-color: rgb(23, 63, 70);
+	border: 1px solid rgb(159, 222, 226);
+}
+
+.project__images-controller:hover {
+	transform: scale(1.4);
+	background-color: rgb(23, 63, 70);
+	border: 1px solid rgb(159, 222, 226);
+}

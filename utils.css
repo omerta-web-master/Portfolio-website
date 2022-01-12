@@ -1,0 +1,81 @@
+/* VARIABLES */
+:root {
+	--primary: rgba(22, 176, 196, 0.5);
+	--animation-delay: 0.2s;
+	--animation-speed: 0.8s;
+}
+/* ---------------------------------------------- */
+.section__title {
+	padding: 3rem 0px;
+	text-align: center;
+}
+
+.section__title h1 {
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	display: inline-block;
+	border-left: 1px solid rgb(86, 123, 148);
+	border-right: 1px solid rgb(86, 123, 148);
+	padding: 1rem 2rem;
+}
+
+/* ANIMATIONS */
+.animate_top {
+	animation: animationFromTop var(--animation-speed) ease-in-out forwards;
+}
+
+.animate_right {
+	animation: animationFromRight var(--animation-speed) ease-in forwards;
+}
+
+.animate_left {
+	animation: animationFromLeft var(--animation-speed) ease-in forwards;
+}
+
+.animate_bottom {
+	animation: animationFromBottom var(--animation-speed) ease-in forwards;
+}
+
+@keyframes animationFromTop {
+	from {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes animationFromRight {
+	from {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes animationFromLeft {
+	from {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes animationFromBottom {
+	from {
+		transform: translateY(200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

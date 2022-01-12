@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+
+		<title>Portfolio</title>
+
+		<link rel="stylesheet" href="utils.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="media.css" />
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="main__header">
+			<nav class="main__nav">
+				<ul>
+					<li><a href="#home" class="main__nav-link">Home</a></li>
+					<li class="dropdown">
+						<button
+							href="#projects"
+							class="main__nav-link"
+							data-projects-dropdown-toggler
+						>
+							Projects
+							<i class="fas fa-caret-down"></i>
+						</button>
+						<ul class="dropdown_menu" id="projects_dropdown">
+							<li><a href="#shoes_genius">E-commerce platform</a></li>
+							<li><a href="#bug_tracker">Bug tracker</a></li>
+							<li><a href="#insta_clone">Instagram clone</a></li>
+							<li><a href="#movie_app">Movie App</a></li>
+							<li><a href="#pasolino">Pasolino landing page</a></li>
+							<li><a href="#barber_shop">Barber shop landing page</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="main" id="home">
+			<!-- SHOWCASE -->
+			<section class="showcase__container">
+				<div class="container">
+					<div class="showcase">
+						<div class="showcase__content">
+							<h3 class="showcase__name">Dumitru Merlusca</h3>
+							<h1 class="showcase__title">
+								<span id="showcase__super">WEB</span>
+								developer
+							</h1>
+							<p class="showcase__subtitle" data-auto-text></p>
+							<a href="#projects__section" class="showcase__link">
+								CHECK MY PROJECTS
+							</a>
+						</div>
+						<div class="showcase__canvas-container">
+							<canvas id="showcase__canvas"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- PROJECTS -->
+			<div class="section__title">
+				<h1>Projects</h1>
+			</div>
+			<section class="projects__section" id="projects__section">
+				<!-- SHOES GENIUS -->
+				<article id="shoes_genius" class="project__container" data-anim="top">
+					<div class="container">
+						<div class="project">
+							<div class="project__images">
+								<div class="project__images-slider-container">
+									<div
+										class="project__images-slider"
+										data-project__images-slider="shoesGenius"
+									>
+										<div class="project__images-slide">
+											<img src="./project-images/shoesGenius.png" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/shoesGenius2.png" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/shoesGenius3.png" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="project__images-controllers">
+									<button
+										class="project__images-controller active"
+										data-project__images-controller="shoesGenius"
+										data-image-number="1"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="shoesGenius"
+										data-image-number="2"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="shoesGenius"
+										data-image-number="3"
+									></button>
+								</div>
+							</div>
+							<div class="project__info">
+								<h1 class="project__title">React e-commerce platform</h1>
+								<p>
+									This is a functional online shop with a modern design and
+									ready to be used. It is built completely from scratch using
+									React as a front end framework, Node Js and Express for the
+									backend, and MongoDB as the main database.
+								</p>
+								<p>Functionality:</p>
+								<ul class="project__feature-list">
+									<li class="project__feature-item">
+										- authentication system (JWT)
+									</li>
+									<li class="project__feature-item">- adding items to cart</li>
+									<li class="project__feature-item">- checkout</li>
+									<li class="project__feature-item">- paypal payment system</li>
+									<li class="project__feature-item">- order tracking</li>
+									<li class="project__feature-item">- admin functionality</li>
+									<li class="project__feature-item">
+										- product management (create new products, update existent
+										products)
+									</li>
+									<li class="project__feature-item">- file uploading</li>
+								</ul>
+								<p>
+									Tech stack: Javascript, React, Redux, Node Js, Express, Mongo
+									DB (NoSQL), HTML, CSS, Tailwind CSS
+								</p>
+								<div class="project__actions">
+									<a
+										target="_blank"
+										href="https://shoes-genius.herokuapp.com/"
+										class="project__btn project__btn-primary"
+									>
+										Live project
+									</a>
+									<a
+										href="https://github.com/omerta-web-master/e-commerce-platform"
+										target="_blank"
+										class="project__btn project__btn-secondary"
+									>
+										Github repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- BUG TRACKER -->
+				<article id="bug_tracker" class="project__container" data-anim="top">
+					<div class="container">
+						<div class="project">
+							<div class="project__images">
+								<div class="project__images-slider-container">
+									<div
+										class="project__images-slider"
+										data-project__images-slider="bugTracker"
+									>
+										<div class="project__images-slide">
+											<img src="./project-images/bugTracker21.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/bugTracker22.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/bugTracker23.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="project__images-controllers">
+									<button
+										class="project__images-controller active"
+										data-project__images-controller="bugTracker"
+										data-image-number="1"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="bugTracker"
+										data-image-number="2"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="bugTracker"
+										data-image-number="3"
+									></button>
+								</div>
+							</div>
+							<div class="project__info">
+								<h1 class="project__title">Bug tracker</h1>
+								<p>
+									This is kind of the application you see in a company for
+									managing project. All the company projects are listed inside
+									the app and if some user notices a bug or some issues they can
+									send a ticket explaining the problem. This ticket can be later
+									assigned to a developer to fix.
+								</p>
+								<p>Functionality:</p>
+								<ul class="project__feature-list">
+									<li class="project__feature-item">
+										- authentication system (JWT)
+									</li>
+									<li class="project__feature-item">
+										- role management (user can have admin, developer,
+										submitter, or project manager role)
+									</li>
+									<li class="project__feature-item">
+										- users can add comments, send tickets
+									</li>
+									<li class="project__feature-item">
+										- developers can solve issues and update ticket status
+									</li>
+									<li class="project__feature-item">
+										- admins can manage users, projects, roles
+									</li>
+								</ul>
+								<p>
+									Tech stack: Javascript, React, Context API, Node Js, Express,
+									Mongo DB (NoSQL), HTML, CSS, Bootstrap
+								</p>
+								<div class="project__actions">
+									<a
+										target="_blank"
+										href="https://focused-minsky-858c37.netlify.app/login"
+										class="project__btn project__btn-primary"
+									>
+										Live project
+									</a>
+									<a
+										target="_blank"
+										href="https://github.com/omerta-web-master/Issues-tracker"
+										class="project__btn project__btn-secondary"
+									>
+										Github repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- INSTAGRAM CLONE -->
+				<article id="insta_clone" class="project__container" data-anim="top">
+					<div class="container">
+						<div class="project">
+							<div class="project__images">
+								<div class="project__images-slider-container">
+									<div
+										class="project__images-slider"
+										data-project__images-slider="instaClone"
+									>
+										<div class="project__images-slide">
+											<img src="./project-images/instaClone1.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/instaClone2.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/instaClone3.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/instaClone4.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="project__images-controllers">
+									<button
+										class="project__images-controller active"
+										data-project__images-controller="instaClone"
+										data-image-number="1"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="instaClone"
+										data-image-number="2"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="instaClone"
+										data-image-number="3"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="instaClone"
+										data-image-number="4"
+									></button>
+								</div>
+							</div>
+							<div class="project__info">
+								<h1 class="project__title">Instagram clone</h1>
+								<p>
+									Yet another React project, because React is awesome, but there
+									was one thing missing from the other projects, Typescript.
+									Here I tried my best to follow the best coding and
+									architecture patters.
+								</p>
+								<p>Typescript is awesome to.</p>
+								<p>Functionality:</p>
+								<ul class="project__feature-list">
+									<li class="project__feature-item">- authentication (JWT)</li>
+									<li class="project__feature-item">- messaging</li>
+									<li class="project__feature-item">
+										- follow/unfollow system
+									</li>
+									<li class="project__feature-item">- creating a post</li>
+									<li class="project__feature-item">- file upload</li>
+								</ul>
+								<p>
+									The app is not complete, but I stil wanted to include it here
+									as it has a scalable architecture, and it's pretty easy to add
+									other features
+								</p>
+								<p>
+									Tech stack: Typescript, React, Redux, React Query, Node Js,
+									MongoDB, HTML, CSS, Bootstrap
+								</p>
+								<div class="project__actions">
+									<a
+										target="_blank"
+										href="https://github.com/omerta-web-master/Instagram-clone"
+										class="project__btn project__btn-secondary"
+									>
+										Github repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- MOVIE APP -->
+				<article id="movie_app" class="project__container" data-anim="top">
+					<div class="container">
+						<div class="project">
+							<div class="project__images">
+								<div class="project__images-slider-container">
+									<div
+										class="project__images-slider"
+										data-project__images-slider="movieApp"
+									>
+										<div class="project__images-slide">
+											<img src="./project-images/movieApp3.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/movieApp2.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/movieApp1.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/movieApp4.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="project__images-controllers">
+									<button
+										class="project__images-controller active"
+										data-project__images-controller="movieApp"
+										data-image-number="1"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="movieApp"
+										data-image-number="2"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="movieApp"
+										data-image-number="3"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="movieApp"
+										data-image-number="4"
+									></button>
+								</div>
+							</div>
+							<div class="project__info">
+								<h1 class="project__title">Movie app</h1>
+								<p>
+									Movie App created 100% with Vanilla Javascript using the TMDB
+									api
+								</p>
+								<p>Functionality:</p>
+								<ul class="project__feature-list">
+									<li class="project__feature-item">
+										- you can search movies and tv shows by name, genre,
+										category, year
+									</li>
+									<li class="project__feature-item">
+										- extra details about movies / tv shows, similar movies,
+										actors, seasons, trailer, budgets, release date etc..
+									</li>
+									<li class="project__feature-item">- pagination</li>
+								</ul>
+								<p>Tech stack: Javascript, HTML, CSS, SASS</p>
+								<div class="project__actions">
+									<a
+										target="_blank"
+										href="https://nostalgic-benz-8583f9.netlify.app/"
+										class="project__btn project__btn-primary"
+									>
+										Live project
+									</a>
+									<a
+										target="_blank"
+										href="https://github.com/omerta-web-master/Movie-app"
+										class="project__btn project__btn-secondary"
+									>
+										Github repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- PASOLINO -->
+				<article id="pasolino" class="project__container" data-anim="top">
+					<div class="container">
+						<div class="project">
+							<div class="project__images">
+								<div class="project__images-slider-container">
+									<div
+										class="project__images-slider"
+										data-project__images-slider="pasolino"
+									>
+										<div class="project__images-slide">
+											<img src="./project-images/pasolino1.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/pasolino2.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/pasolino3.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/pasolino4.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/pasolino5.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="project__images-controllers">
+									<button
+										class="project__images-controller active"
+										data-project__images-controller="pasolino"
+										data-image-number="1"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="pasolino"
+										data-image-number="2"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="pasolino"
+										data-image-number="3"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="pasolino"
+										data-image-number="4"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="pasolino"
+										data-image-number="5"
+									></button>
+								</div>
+							</div>
+							<div class="project__info">
+								<h1 class="project__title">Pasolino restaurant landing page</h1>
+								<p>
+									Just a clean, modern and responsive landing page for a
+									restaurant
+								</p>
+								<p>Strong points :</p>
+								<ul class="project__feature-list">
+									<li class="project__feature-item">- responsiveness</li>
+									<li class="project__feature-item">- clean design</li>
+									<li class="project__feature-item">- easy customizable</li>
+								</ul>
+								<p>Tech stack: SASS, HTML, CSS, Javascript</p>
+								<div class="project__actions">
+									<a
+										target="_blank"
+										href="https://competent-brattain-bbc39a.netlify.app/"
+										class="project__btn project__btn-primary"
+									>
+										Live project
+									</a>
+									<a
+										target="_blank"
+										href="https://github.com/omerta-web-master/Pasolino-restaurant-landing-page"
+										class="project__btn project__btn-secondary"
+									>
+										Github repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- BARBERYA -->
+				<article id="barber_shop" class="project__container" data-anim="top">
+					<div class="container">
+						<div class="project">
+							<div class="project__images">
+								<div class="project__images-slider-container">
+									<div
+										class="project__images-slider"
+										data-project__images-slider="barberya"
+									>
+										<div class="project__images-slide">
+											<img src="./project-images/barberya1.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/barberya2.jpg" alt="" />
+										</div>
+										<div class="project__images-slide">
+											<img src="./project-images/barberya3.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="project__images-controllers">
+									<button
+										class="project__images-controller active"
+										data-project__images-controller="barberya"
+										data-image-number="1"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="barberya"
+										data-image-number="2"
+									></button>
+									<button
+										class="project__images-controller"
+										data-project__images-controller="barberya"
+										data-image-number="3"
+									></button>
+								</div>
+							</div>
+							<div class="project__info">
+								<h1 class="project__title">Barber shop landing page</h1>
+								<p>Another clean, modern and responsive landing page</p>
+								<p>Strong points :</p>
+								<ul class="project__feature-list">
+									<li class="project__feature-item">- responsiveness</li>
+									<li class="project__feature-item">- clean design</li>
+									<li class="project__feature-item">- easy customizable</li>
+								</ul>
+								<p>Tech stack: SASS, HTML, CSS, Javascript</p>
+								<div class="project__actions">
+									<a
+										target="_blank"
+										href="https://confident-roentgen-b0a7d5.netlify.app/"
+										class="project__btn project__btn-primary"
+									>
+										Live project
+									</a>
+									<a
+										target="_blank"
+										href="https://github.com/omerta-web-master/Barberya-landing-page"
+										class="project__btn project__btn-secondary"
+									>
+										Github repo
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+
+		<script src="canvas.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
