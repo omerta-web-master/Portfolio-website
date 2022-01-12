@@ -1,8 +1,6 @@
 // Auto text writer
 (function autoTextWriter() {
-	const text = `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-  Consequatur quasi a aliquam et dolores facere incidunt voluptatem
-  veritatis distinctio earum?`;
+	const text = `Young self motivated person who loves to code! I pride myself for beeing hardworking, creative, honest and reliable.`;
 	const textContainer = document.querySelector("[data-auto-text]");
 	for (let i = 0; i < text.length; i++) {
 		setTimeout(() => {
