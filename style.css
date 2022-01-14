@@ -131,6 +131,7 @@ body {
 	position: relative;
 	background: url("./project-images/bg1.jpg") no-repeat center center/cover;
 	color: white;
+	min-height: 600px;
 }
 
 .showcase__container::before {
