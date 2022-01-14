@@ -2,7 +2,7 @@ const BASE_SERVER_URL = "https://portfolio-api2.herokuapp.com";
 const API_KEY = "c77fbeed277844f6984cac026a86b03f";
 // Auto text writer
 (function autoTextWriter() {
-	const text = `Young self motivated person who loves to code! I pride myself for beeing hardworking, creative, honest and reliable.`;
+	const text = `Young self motivated person who loves to code! I pride myself for being hardworking, creative, honest and reliable.`;
 	const textContainer = document.querySelector("[data-auto-text]");
 	for (let i = 0; i < text.length; i++) {
 		setTimeout(() => {
