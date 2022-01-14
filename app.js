@@ -1,4 +1,5 @@
 const BASE_SERVER_URL = "https://portfolio-api2.herokuapp.com";
+const API_KEY = "c77fbeed277844f6984cac026a86b03f";
 // Auto text writer
 (function autoTextWriter() {
 	const text = `Young self motivated person who loves to code! I pride myself for beeing hardworking, creative, honest and reliable.`;
@@ -107,16 +108,18 @@ const BASE_SERVER_URL = "https://portfolio-api2.herokuapp.com";
 (function trackVisits() {
 	document.addEventListener("DOMContentLoaded", async () => {
 		try {
-			const res = await fetch("http://ip-api.com/json/");
+			const res = await fetch(
+				`https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}`
+			);
 			if (!res.ok) throw new Error("Fetch error");
 			const data = await res.json();
 			const geoData = {
-				ip: data.query,
-				country: data.country,
+				ip: data.ip,
 				city: data.city,
-				zipcode: data.zip,
-				lat: data.lat,
-				lon: data.lon,
+				country: data.country_name,
+				zipcode: data.zipcode,
+				lat: data.latitude,
+				lon: data.longitude,
 			};
 			sendDataToServer(geoData);
 		} catch (error) {
