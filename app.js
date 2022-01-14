@@ -1,3 +1,4 @@
+const BASE_SERVER_URL = "https://portfolio-api2.herokuapp.com";
 // Auto text writer
 (function autoTextWriter() {
 	const text = `Young self motivated person who loves to code! I pride myself for beeing hardworking, creative, honest and reliable.`;
@@ -100,4 +101,43 @@
 			dropdown.classList.remove("show");
 		});
 	});
+})();
+
+// Track visits on website
+(function trackVisits() {
+	document.addEventListener("DOMContentLoaded", async () => {
+		try {
+			const res = await fetch("http://ip-api.com/json/");
+			if (!res.ok) throw new Error("Fetch error");
+			const data = await res.json();
+			const geoData = {
+				ip: data.query,
+				country: data.country,
+				city: data.city,
+				zipcode: data.zip,
+				lat: data.lat,
+				lon: data.lon,
+			};
+			sendDataToServer(geoData);
+		} catch (error) {
+			console.log(error.message);
+		}
+	});
+
+	async function sendDataToServer(data) {
+		const config = {
+			method: "POST",
+			headers: {
+				"Content-type": "application/json",
+			},
+			body: JSON.stringify(data),
+		};
+		try {
+			const res = await fetch(BASE_SERVER_URL + "/visitors", config);
+			if (!res.ok) throw new Error("Fetch error");
+			const data = await res.json();
+		} catch (error) {
+			console.log(error.message);
+		}
+	}
 })();
