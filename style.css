@@ -141,7 +141,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(137, 231, 243, 0.6);
+	background-color: rgba(26, 5, 49, 0.6);
 	z-index: 0;
 }
 
@@ -170,7 +170,6 @@ body {
 }
 
 .showcase__name {
-	color: black;
 	z-index: 1;
 	font-size: 2rem;
 	font-weight: 300;
@@ -186,8 +185,7 @@ body {
 	font-weight: bold;
 	font-size: 5rem;
 	text-align: center;
-	color: rgba(67, 89, 104, 0.432);
-	text-shadow: 3px 3px 0px rgb(0, 0, 0);
+	color: white;
 	margin-bottom: 1rem;
 	opacity: 0;
 	animation: animateShowcaseContent 2s ease calc(var(--animation-delay) * 2)
@@ -199,13 +197,13 @@ body {
 	font-size: 1.5rem;
 	font-weight: 300;
 	letter-spacing: -0.1rem;
-	color: rgb(17, 7, 73);
+	color: rgb(162, 250, 246);
 	text-shadow: none;
 }
 
 .showcase__subtitle {
 	font-weight: 300;
-	color: rgb(31, 27, 27);
+	color: rgb(210, 235, 241);
 	font-size: 1.6rem;
 	opacity: 0;
 	animation: animateShowcaseContent 2s ease var(--animation-delay) forwards;
